@@ -21,8 +21,8 @@ variable "label_order" {
 
 variable "managedby" {
   type        = string
-  default     = ""
-  description = "ManagedBy, eg 'Opz0' "
+  default     = "cypik"
+  description = "ManagedBy, eg 'cypik' "
 }
 
 variable "attributes" {
@@ -87,7 +87,7 @@ variable "scan_on_push" {
 
 variable "repository" {
   type        = string
-  default     = "https://github.com/opz0/terraform-aws-ecr"
+  default     = "https://github.com/cypik/terraform-aws-ecr"
   description = "Terraform current module repo"
 }
 

@@ -5,7 +5,8 @@ locals {
 }
 
 module "labels" {
-  source      = "git::git@github.com:opz0/terraform-aws-labels.git?ref=v1.0.0"
+  source      = "cypik/labels/aws"
+  version     = "1.0.1"
   name        = var.name
   repository  = var.repository
   environment = var.environment
