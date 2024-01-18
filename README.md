@@ -22,8 +22,8 @@ To use this module, you can include it in your Terraform configuration. Here's a
 
 ```hcl
 module "private_ecr" {
-  source             = "Cypik/ecr/aws"
-  version            =  "1.0.1"
+  source             = "cypik/ecr/aws"
+  version            = "1.0.1"
   enable_private_ecr = true
   name               = local.name
   environment        = local.environment
@@ -36,7 +36,7 @@ module "private_ecr" {
 ```hcl
 module "public_ecr" {
   source                   = "cypik/ecr/aws"
-  version                  =   "1.0.1"
+  version                  = "1.0.1"
   enable_public_ecr        = true
   name                     = local.name
   environment              = local.environment
