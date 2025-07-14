@@ -36,7 +36,7 @@ resource "aws_ecr_repository" "default" {
   dynamic "timeouts" {
     for_each = var.timeouts
     content {
-      delete = lookup(timeouts.value.delete, null)
+      delete = lookup(timeouts.value, "delete", null)
     }
   }
 }
