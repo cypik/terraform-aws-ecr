@@ -6,7 +6,7 @@ locals {
 
 module "labels" {
   source      = "cypik/labels/aws"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = var.name
   repository  = var.repository
   environment = var.environment
@@ -36,7 +36,7 @@ resource "aws_ecr_repository" "default" {
   dynamic "timeouts" {
     for_each = var.timeouts
     content {
-      delete = lookup(timeouts.value.delete, null)
+      delete = lookup(timeouts.value, "delete", null)
     }
   }
 }
